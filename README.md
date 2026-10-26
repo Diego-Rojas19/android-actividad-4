@@ -39,22 +39,25 @@ Construir una aplicación móvil funcional e integrada de comercio electrónico 
 
 ## 🚀 4. Funcionalidades Implementadas
 
-### 🔐 A. Autenticación y Gestión de Usuarios
+### 🔐 A. Autenticación y Gestión de Usuarios (Diseño Google Stitch)
+Las tres pantallas de autenticación (**Inicio de Sesión**, **Registro** y **Recuperación de Contraseña**) fueron diseñadas en **Google Stitch** e implementadas fielmente en Jetpack Compose respetando la paleta de colores institucionales (`#008844`), la tipografía, componentes y espaciados del sistema de diseño Stitch:
+
 1. **Inicio de Sesión (`LoginScreen`)**:
-   - Campo de correo electrónico con validación de sintaxis (`Patterns.EMAIL_ADDRESS`).
+   - Diseño estructurado basado en los patrones de **Google Stitch** y colores institucionales SENA.
+   - Campo de correo electrónico con icono `Mail` y validación de sintaxis (`Patterns.EMAIL_ADDRESS`).
    - Campo de contraseña con opción para mostrar u ocultar el texto (`Visibility` / `VisibilityOff`).
    - Verificación estricta de credenciales mediante hashes **SHA-256**. Rechaza contraseñas incorrectas y correos no registrados.
-   - Enlace directo a la recuperación de contraseña y al registro de nuevos usuarios.
+   - Enlaces directos a la recuperación de contraseña ("¿Olvidaste tu contraseña?") y al registro de nuevos usuarios ("Regístrate aquí").
    - Diálogo informativo al interactuar con el botón "Continuar con Google".
 
 2. **Registro de Usuarios (`RegisterScreen`)**:
-   - Basado en los componentes y colores institucionales de Google Stitch (`#008844`).
+   - Traducido directamente del diseño exportado de **Google Stitch** (`registro_crear_cuenta`).
    - Campos para Nombre completo, Correo electrónico, Contraseña y Confirmación de contraseña.
    - Validación local de campos obligatorios, formato de correo, longitud mínima de 6 caracteres en la contraseña, coincidencia exacta entre contraseñas y aceptación obligatoria de los términos del ecosistema SENA.
    - Prevención de registros duplicados con correos ya existentes.
 
 3. **Recuperación de Contraseña (`ForgotPasswordScreen`)**:
-   - Diseño adaptable exportado de Google Stitch con emblema de seguridad SENA.
+   - Traducido directamente del diseño exportado de **Google Stitch** (`recuperar_contrase_a`) con emblema de seguridad SENA.
    - Verificación previa del correo electrónico en el almacenamiento de la aplicación.
    - Diálogo informativo de restablecimiento de contraseña local y aclaración técnica sobre servidores de correo externos.
 
@@ -121,7 +124,7 @@ TiendaApp/
 │       │       │   └── UserRepository.kt  # Gestión local de usuarios y hash SHA-256
 │       │       └── ui/
 │       │           ├── screen/
-│       │           │   ├── LoginScreen.kt          # Pantalla de Inicio de Sesión
+│       │           │   ├── LoginScreen.kt          # Pantalla de Inicio de Sesión (Diseño Stitch)
 │       │           │   ├── RegisterScreen.kt       # Pantalla de Registro (Diseño Stitch)
 │       │           │   ├── ForgotPasswordScreen.kt # Pantalla de Recuperación (Diseño Stitch)
 │       │           │   ├── HomeScreen.kt           # Catálogo de Productos

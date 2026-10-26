@@ -123,7 +123,7 @@ fun RegisterScreen(
                     }
                     Spacer(modifier = Modifier.width(6.dp))
                     Text(
-                        text = "Tienda SENA",
+                        text = "TiendaApp",
                         fontSize = 18.sp,
                         fontWeight = FontWeight.Bold,
                         color = senaGreen
